@@ -11,6 +11,19 @@ def chessboard(number, length, spacing):
     turn(90)
     move(i*spacing)
     turn(90)
+ 
+  move(length)
+  turn(90)
+  for i in range(0,number):
+    turn(90)
+    move(i*spacing)
+    turn(-90)
+    move(length)
+    turn(-180)
+    move(length)
+    turn(90)
+    move(i*spacing)
+    turn(90)
   
   
     
