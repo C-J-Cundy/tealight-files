@@ -10,5 +10,5 @@ def lines(length, number, spacing):
      turn(90)
      move(spacing*number)
 
-lines(100,10,10)
+lines(100,100,100)
 
