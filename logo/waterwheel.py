@@ -7,7 +7,7 @@ def lines(length, number, spacing):
         turn(90)
         move(spacing)
         turn(90)
-        move(length)]
+        move(length)
         turn(-90)
         move(spacing)
         turn(-90)
