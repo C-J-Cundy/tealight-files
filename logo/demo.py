@@ -5,6 +5,6 @@ from tealight.logo import (move,
 colors = ["red", "green", "blue"]
 
 for i in range(0,300):
-  move(i)
+  move(2*i)
   turn(90)
   color(colors[i%3])
