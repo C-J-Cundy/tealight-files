@@ -1,18 +1,14 @@
 from tealight.logo import move, turn
 
 
-def triangle(side):
-  for i in range(0,3):
-    move(side)
-    turn(120)
+def lines(length, number, spacing):
+     for i in range(0,number):
+        move(length)
+        turn(90)
+        move(spacing)
+        turn 90
+     turn(90)
+     move(spacing*number)
 
-def waterwheel(edges, size):
-  angle = 360 / edges
-  decoration = size / 2
-  for i in range(0, edges):
-    move(size)
-    triangle(decoration)
-    turn(angle)
+lines(10,10,10)
 
-turn(-90)
-waterwheel(12,75)
