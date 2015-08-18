@@ -11,7 +11,7 @@ def chessboard(number, length, spacing):
     turn(90)
     move(i*spacing)
     turn(90)
-    
+  
   
     
-chessboard(10,20,20)
+chessboard(10,100,20)
