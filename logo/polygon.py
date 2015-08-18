@@ -1,9 +1,15 @@
 from tealight.logo import move, turn
 
-def polygon(edges, size):
-  angle = 360.0 / edges
-  for i in range(0, edges):
-    move(size)
-    turn(angle)
+def chessboard(number, length, spacing):
+  for i in range(0,number):
+    turn(90)
+    move(i*spacing)
+    turn(-90)
+    move(length)
+    turn(-180)
+    move(length)
+    turn(-90)
+    move(i*spacing)
+    turn(90)
     
-polygon(2,100)
+chessboard(10,100,20)
