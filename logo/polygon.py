@@ -27,4 +27,4 @@ def chessboard(number, length, spacing):
   
   
     
-chessboard(8,160,20)
+chessboard(9,160,20)
