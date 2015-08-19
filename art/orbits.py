@@ -51,7 +51,7 @@ def handle_frame():
   
   if ay < 0.6:
     #ay += (1 * 10 ** -3) #Gravity in -Y direction
-
+    pass
   spot(x,y,8)
   
   
