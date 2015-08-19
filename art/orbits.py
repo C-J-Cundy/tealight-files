@@ -28,12 +28,9 @@ def handle_keyup(key):
   global ax, ay
 
   if key == "left" or key == "right":
-    if ax > 0: 
-      ax -= (0.1)
-    else:
-      ax = 0
+    ax += 0.01
   elif key == "up" or key == "down":
-    ay = 0
+    ay += 0.01
     
 def handle_frame():
   global x,y,vx,vy,ax,ay
@@ -50,8 +47,8 @@ def handle_frame():
   color("blue")
   
   if ay < 0.6:
-    #ay += (1 * 10 ** -3) #Gravity in -Y direction
-    pass
+    ay += (1 * 10 ** -3) #Gravity in -Y direction
+
   spot(x,y,8)
   
   
