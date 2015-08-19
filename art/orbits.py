@@ -11,16 +11,12 @@ ay = 0
 
 power = 0.3
 
-def Friction(friction):
-  global friction
-  friction = 0
 
 def handle_keydown(key):
   global ax, ay
-
+  
   if key == "left":
-    ax = -power + friction
-    friction += (1*10**-3)
+    ax = -power + 0.001
   elif key == "right":
     ax = power
   elif key == "up":
@@ -50,7 +46,7 @@ def handle_frame():
   
   color("blue")
   
-  ay += (1 * 10 ** -3)
+  ay += (1 * 10 ** -3) #Gravity in -Y direction
 
   spot(x,y,8)
   
