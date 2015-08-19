@@ -46,11 +46,8 @@ def handle_frame():
   
   color("blue")
   
-  if ay > 0:
-    ay -= 1
-    
-  elif ax > 0:
-    ax -= 1
+  ay-= 0.1
+
   spot(x,y,8)
   
   
