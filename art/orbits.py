@@ -46,7 +46,7 @@ def handle_frame():
   
   color("blue")
   
-  ay-= 0.01
+  ay+= 0.01
 
   spot(x,y,8)
   
