@@ -15,9 +15,8 @@ power = 0.3
 def handle_keydown(key):
   global ax, ay
   
-  if key == "left" and power > 0:
+  if key == "left":
     ax = -power
-    power = power - 0.1
   elif key == "right":
     ax = power
   elif key == "up":
@@ -29,9 +28,9 @@ def handle_keyup(key):
   global ax, ay
 
   if key == "left" or key == "right":
-    ax = 0
+    ax -= 0.01
   elif key == "up" or key == "down":
-    ay = 0
+    ay -= 0.01
     
 def handle_frame():
   global x,y,vx,vy,ax,ay
