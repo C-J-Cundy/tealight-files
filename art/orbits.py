@@ -10,13 +10,16 @@ ax = 0
 ay = 0
 
 power = 0.3
+friction = 0
+
 
 def handle_keydown(key):
   global ax, ay
   
 
   if key == "left":
-    ax = -power
+    ax = -power + friction
+    friction += (1*10**-3)
   elif key == "right":
     ax = power
   elif key == "up":
