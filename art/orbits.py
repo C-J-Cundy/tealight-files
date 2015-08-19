@@ -46,7 +46,7 @@ def handle_frame():
   
   color("blue")
   
-  ay += (1 * 10 ** -3) #Gravity in -Y direction
+  #ay += (1 * 10 ** -3) #Gravity in -Y direction
 
   spot(x,y,8)
   
