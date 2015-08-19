@@ -12,8 +12,8 @@ ay = 0
 power = 0.3
 
 def Friction(friction):
-  friction = 0
   global friction
+  friction = 0
 
 def handle_keydown(key):
   global ax, ay
