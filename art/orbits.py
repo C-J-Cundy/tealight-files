@@ -29,7 +29,7 @@ def handle_keyup(key):
 
   if key == "left" or key == "right":
     if ax > 0: 
-      ax -= (9 * 10 ** -3)
+      ax -= (0.01)
     else:
       ax = 0
   elif key == "up" or key == "down":
