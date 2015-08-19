@@ -46,7 +46,7 @@ def handle_frame():
   
   color("blue")
   
-  if ay < 0.6
+  if ay < 0.6:
     ay += (1 * 10 ** -3) #Gravity in -Y direction
 
   spot(x,y,8)
