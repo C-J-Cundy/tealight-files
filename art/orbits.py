@@ -12,7 +12,7 @@ ay = 0
 power = 0.3
 
 
-def handle_keydown(key):
+def handle_keydown(key, power):
   global ax, ay
   
   if key == "left":
