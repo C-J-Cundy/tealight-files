@@ -17,7 +17,7 @@ def handle_keydown(key):
 
   if key == "left":
     ax = power/10
-    elif key == "right":
+  elif key == "right":
     ax = power
   elif key == "up":
     ay = -power
