@@ -8,6 +8,8 @@ xstart=50
 ystart=50
 numMines=10
 
+gameOn=True
+
 mines = []
 flags = []
 
@@ -55,7 +57,8 @@ def setup():
           
 def reveal(i,j):
   if mines[i][j] == -1:
-    print "You lose"
+    print "Game over"
+    gameOn=False
   tx=xstart+size/10+i*size
   ty=ystart+size/10+j*size
   color("white")
@@ -78,8 +81,7 @@ def handle_mousedown(x,y,button):
   global flags
   boxX=(x-xstart)/size
   boxY=(y-ystart)/size
-  print boxX,",",boxY,",",mines[boxX][boxY]
-  if boxX >= 0 and boxY >= 0 and boxX <= 9 and boxY <= 9:
+  if boxX >= 0 and boxY >= 0 and boxX <= 9 and boxY <= 9 and gameOn:
     if button == "left":
       if not flags[boxX][boxY]:
         reveal(boxX,boxY)
