@@ -83,5 +83,4 @@ def handle_mousedown(x,y,button):
     if button == "right":
       toggleFlag(boxX,boxY)
       
-if 1:
-  print "test"
+image(100,100,"misc/pirateflag")
