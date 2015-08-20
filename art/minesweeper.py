@@ -81,7 +81,8 @@ def handle_mousedown(x,y,button):
   print boxX,",",boxY,",",mines[boxX][boxY]
   if boxX >= 0 and boxY >= 0 and boxX <= 9 and boxY <= 9:
     if button == "left":
-      reveal(boxX,boxY)
+      if not flags[boxX][boxY]:
+        reveal(boxX,boxY)
     if button == "right":
       toggleFlag(boxX,boxY)
       flags[boxX][boxY]=(flags[boxX][boxY]-1)%2
