@@ -82,3 +82,6 @@ def handle_mousedown(x,y,button):
       reveal(boxX,boxY)
     if button == "right":
       toggleFlag(boxX,boxY)
+      
+if 1:
+  print "test"
