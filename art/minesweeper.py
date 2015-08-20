@@ -65,10 +65,10 @@ def reveal(i,j):
   
   
 setup()
-print mines
 
 def handle_mousedown(x,y,button):
   global mines
+  global flags
   boxX=(x-xstart)/size
   boxY=(y-ystart)/size
   print boxX,",",boxY,",",mines[boxX][boxY]
