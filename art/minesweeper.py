@@ -10,4 +10,4 @@ def draw_grid(x,y,size):
       box(x+size/10+i*size,y+size/10+j*size,size/10*8,size/10*8)
       color("black")
     
-draw_grid(100,100,80)
+draw_grid(50,50,80)
