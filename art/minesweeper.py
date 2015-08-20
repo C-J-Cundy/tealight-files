@@ -66,3 +66,4 @@ def handle_mousedown(x,y):
   boxX=(x-xstart)/size
   boxY=(y-ystart)/size
   print boxX,",",boxY,",",mines[boxX][boxY]
+  reveal(boxX,boxY)
