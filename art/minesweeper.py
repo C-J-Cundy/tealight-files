@@ -6,7 +6,7 @@ size=80
 xstart=50
 ystart=50
 
-mines = [[]]
+mines = []
 
 
 def draw_grid(x,y,size):
@@ -21,11 +21,9 @@ def setup():
   draw_grid(xstart,ystart,size)
   global mines
   for i in range(10):
+    mines.append([])
     for j in range(10):
       mines[i].append(0)
-
-for i in range(10):
-  print i
       
 setup()
 print mines
