@@ -8,10 +8,25 @@ xstart=50
 ystart=50
 numMines=10
 
+total=10*10
+uncovered=0
+
 gameOn=True
 
 mines = []
 flags = []
+
+
+
+def victory():
+  global gameOn
+  print "Victory"
+  gameOn=False
+  
+def defeat():
+  global gameOn
+  print "You lose"
+  gameOn=False
 
 
 def draw_grid(x,y,size):
@@ -56,19 +71,19 @@ def setup():
           
           
 def reveal(i,j):
-  global gameOn
   global flags
+  global uncovered
   if flags[i][j]:
     return
   if mines[i][j] == -1:
-    print "Game over"
-    gameOn=False
+    defeat()
   tx=xstart+size/10+i*size
   ty=ystart+size/10+j*size
   color("white")
   box(tx,ty,size/10*8,size/10*8)
   color("black")
   text(tx+size/10*3,ty+size/10*3,mines[i][j])
+  uncovered += 1
   flags[i][j]=2
   if mines[i][j] == 0:
     for offx in range(-1,2):
@@ -82,8 +97,7 @@ def toggleFlag(i,j):
     box(xstart+size/10+i*size,ystart+size/10+j*size,size/10*8,size/10*8)
   else:
     image(xstart+size*i,ystart+size*j+size/10*2-4,"misc/PirateFlag.png")
-    
-  
+     
 setup()
 
 def handle_mousedown(x,y,button):
@@ -96,7 +110,13 @@ def handle_mousedown(x,y,button):
     if button == "left":
       if not flags[boxX][boxY]:
         reveal(boxX,boxY)
+        if (total-uncovered <= numMines):
+          victory()
     if button == "right":
       if flags[boxX][boxY] != 2:
         toggleFlag(boxX,boxY)
         flags[boxX][boxY]=(flags[boxX][boxY]-1)%2
+        
+#Todo:
+#Make win
+#Make 
