@@ -17,7 +17,7 @@ def draw_grid(x,y,size):
       box(x+i*size,y+j*size,size,size)
       color("white")
       box(x+size/10+i*size,y+size/10+j*size,size/10*8,size/10*8)
-      color("black")
+      color("black")      
 
 def setup():
   draw_grid(xstart,ystart,size)
@@ -41,7 +41,12 @@ def setup():
     for j in range(10):
       if mines[i][j] != -1:
         minescount=0
-        if i == 0:
+        for offx in range(-1,2):
+          for offy in range(-1,2):
+            if i+offx >= 0 && i+offx <= 9 && j+offy >= 0 && j + offy <= 9:
+              if mines[i][j] == -1:
+                minescount += 1
+        mines[i][j] = minescount
           
         else:
           
