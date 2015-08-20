@@ -15,7 +15,7 @@ def draw_grid(x,y,size):
   for i in range(10):
     for j in range(10):
       box(x+i*size,y+j*size,size,size)
-      color("white")
+      color("blue")
       box(x+size/10+i*size,y+size/10+j*size,size/10*8,size/10*8)
       color("black")      
 
@@ -48,7 +48,13 @@ def setup():
                 minescount += 1
         mines[i][j] = minescount
           
-      
+          
+def reveal(i,j):
+  if mines[i][j] == -1:
+    print "You lose"
+  
+  
+  
 setup()
 print mines
 
