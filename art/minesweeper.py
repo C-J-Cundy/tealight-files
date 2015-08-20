@@ -56,6 +56,8 @@ def reveal(i,j):
   ty=xstart+size/10+j*size
   color("white")
   box(tx,ty,size/10*8,size/10*8)
+  color("black")
+  text(tx,ty,mines[i][j])
   
   
 setup()
