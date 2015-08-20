@@ -33,7 +33,7 @@ def setup():
     tmpx=random.randint(0,9)
     tmpy=random.randint(0,9)
     if (mines[tmpx][tmpy] != -1):
-      mines[tmpx][tmpy]
+      mines[tmpx][tmpy] = -1
       counter += 1
       
 setup()
