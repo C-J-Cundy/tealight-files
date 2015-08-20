@@ -52,8 +52,8 @@ def setup():
 def reveal(i,j):
   if mines[i][j] == -1:
     print "You lose"
-  tx=startx+size/10+i*size
-  ty=starty+size/10+j*size
+  tx=xstart+size/10+i*size
+  ty=xstart+size/10+j*size
   color("white")
   box(tx,ty,size/10*8,size/10*8)
   
