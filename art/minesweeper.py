@@ -8,6 +8,12 @@ ystart=50
 
 mines = [[]]
 
+def setup():
+  global mines
+  for i in range(10):
+    for j in range(10):
+      mines[i].append(0)
+
 def draw_grid(x,y,size):
   for i in range(10):
     for j in range(10):
