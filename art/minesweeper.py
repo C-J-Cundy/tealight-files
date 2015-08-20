@@ -69,6 +69,7 @@ def toggleFlag(i,j):
     box(xstart+size/10+i*size,ystart+size/10+j*size,size/10*8,size/10*8)
   else:
     image(xstart+size*i,ystart+size*j+size/10*2-4,"misc/PirateFlag.png")
+    
   
 setup()
 
@@ -83,4 +84,6 @@ def handle_mousedown(x,y,button):
       reveal(boxX,boxY)
     if button == "right":
       toggleFlag(boxX,boxY)
-      
+      flags[boxX][boxY]=(flags[boxX][boxY]-1)%2
+
+print (-1%2
