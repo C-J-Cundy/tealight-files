@@ -36,6 +36,16 @@ def setup():
       mines[tmpx][tmpy] = -1
       counter += 1
       
+  #Calculate nums
+  for i in range(10):
+    for j in range(10):
+      if mines[i][j] != -1:
+        minescount=0
+        if i == 0:
+          
+        else:
+          
+      
 setup()
 print mines
 
