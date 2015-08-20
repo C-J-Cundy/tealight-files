@@ -7,6 +7,7 @@ def draw_grid(x,y):
     for j in range(10):
       box(x+i*100,y+j*100,100,100)
       color("white")
-      box(x+20+i*100,y+20+j*100,80,80)
+      box(x+10+i*100,y+10+j*100,80,80)
+      color("black")
     
 draw_grid(100,100)
