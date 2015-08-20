@@ -82,6 +82,7 @@ def handle_mousedown(x,y,button):
   if boxX >= 0 and boxY >= 0 and boxX <= 9 and boxY <= 9:
     if button == "left":
       if not flags[boxX][boxY]:
+        print "test"
         reveal(boxX,boxY)
         flags[boxX][boxY]=2
     if button == "right":
