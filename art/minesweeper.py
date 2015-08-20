@@ -48,8 +48,6 @@ def setup():
                 minescount += 1
         mines[i][j] = minescount
           
-        else:
-          
       
 setup()
 print mines
