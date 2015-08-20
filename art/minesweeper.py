@@ -66,6 +66,11 @@ def reveal(i,j):
   box(tx,ty,size/10*8,size/10*8)
   color("black")
   text(tx+size/10*3,ty+size/10*3,mines[i][j])
+  if mines[i][j] == 0:
+    for offx in range(-1,2):
+      for offy in range(-1,2):
+        if i + offx >= 0 and i + offx <= 9 and j+offy >= 0 and j + offy <= 9:
+          reveal(i+offx,j+offy)
 
 def toggleFlag(i,j):
   if flags[i][j]:
