@@ -57,7 +57,7 @@ def reveal(i,j):
   if mines[i][j] == -1:
     print "You lose"
   tx=xstart+size/10+i*size
-  ty=xstart+size/10+j*size
+  ty=ystart+size/10+j*size
   color("white")
   box(tx,ty,size/10*8,size/10*8)
   color("black")
@@ -83,4 +83,4 @@ def handle_mousedown(x,y,button):
     if button == "right":
       toggleFlag(boxX,boxY)
       
-image(100,100,"misc/PirateFlag.png")
+image(xstart,ystart,"misc/PirateFlag.png")
