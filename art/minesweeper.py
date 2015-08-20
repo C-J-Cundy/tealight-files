@@ -83,6 +83,8 @@ def handle_mousedown(x,y,button):
     if button == "left":
       if not flags[boxX][boxY]:
         reveal(boxX,boxY)
+        flags[boxX][boxY]=2
     if button == "right":
-      toggleFlag(boxX,boxY)
-      flags[boxX][boxY]=(flags[boxX][boxY]-1)%2
+      if flags[boxX][boxY] != 2
+        toggleFlag(boxX,boxY)
+        flags[boxX][boxY]=(flags[boxX][boxY]-1)%2
