@@ -12,5 +12,5 @@ def draw_grid(x,y,size):
     
 draw_grid(50,50,80)
 
-def handle_mousedown():
-  print 
+def handle_mousedown(x,y):
+  print x + "," + y
