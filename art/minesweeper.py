@@ -2,12 +2,12 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import (screen_width, screen_height)
 
-def draw_grid(x,y):
+def draw_grid(x,y,size):
   for i in range(10):
     for j in range(10):
-      box(x+i*100,y+j*100,100,100)
+      box(x+i*size,y+j*size,size,size)
       color("white")
-      box(x+10+i*100,y+10+j*100,80,80)
+      box(x+size/10+i*size,y+size/10+j*size,size/10*8,size/10*8)
       color("black")
     
-draw_grid(100,100)
+draw_grid(100,100,80)
