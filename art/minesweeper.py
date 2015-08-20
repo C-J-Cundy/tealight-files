@@ -63,10 +63,11 @@ def reveal(i,j):
 setup()
 print mines
 
-def handle_mousedown(x,y):
+def handle_mousedown(x,y,button):
   global mines
   boxX=(x-xstart)/size
   boxY=(y-ystart)/size
   print boxX,",",boxY,",",mines[boxX][boxY]
-  if boxX >= 0 and boxY >= 0 and boxX <= 9 and boxY <= 9:
-    reveal(boxX,boxY)
+  if button == "left":
+    if boxX >= 0 and boxY >= 0 and boxX <= 9 and boxY <= 9:
+      reveal(boxX,boxY)
