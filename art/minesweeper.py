@@ -57,7 +57,7 @@ def reveal(i,j):
   color("white")
   box(tx,ty,size/10*8,size/10*8)
   color("black")
-  text(tx+size/10*4,ty+size/10*4,mines[i][j])
+  text(tx+size/10*3,ty+size/10*3,mines[i][j])
   
   
 setup()
