@@ -1,10 +1,12 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 
 from tealight.art import (screen_width, screen_height)
+import random
 
 size=80
 xstart=50
 ystart=50
+numMines=10
 
 mines = []
 
@@ -24,6 +26,12 @@ def setup():
     mines.append([])
     for j in range(10):
       mines[i].append(0)
+      
+  #Make mines
+  counter=0
+  while(counter < numMines):
+    tmpx=random.randInt(0,9)
+    counter += 1
       
 setup()
 print mines
