@@ -65,7 +65,8 @@ def reveal(i,j):
 
 def toggleFlag(i,j):
   if flags[i][j]:
-    print "yay"
+    color("lightblue")
+    box(xstart+size/10+i*size,ystart+size/10+j*size,size/10*8,size/10*8)
   else:
     image(xstart+size*i,ystart+size*j+size/10*2-4,"misc/PirateFlag.png")
   
