@@ -43,7 +43,7 @@ def setup():
         minescount=0
         for offx in range(-1,2):
           for offy in range(-1,2):
-            if i+offx >= 0 && i+offx <= 9 && j+offy >= 0 && j + offy <= 9:
+            if i + offx >= 0 and i + offx <= 9 and j+offy >= 0 and j + offy <= 9:
               if mines[i][j] == -1:
                 minescount += 1
         mines[i][j] = minescount
