@@ -11,3 +11,7 @@ def draw_grid(x,y,size):
       color("black")
     
 draw_grid(50,50,80)
+
+def handle_keydown(key):
+  if key == "left":
+    print yay
