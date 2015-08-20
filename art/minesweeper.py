@@ -19,6 +19,7 @@ def draw_grid(x,y,size):
 draw_grid(xstart,ystart,size)
 
 def handle_mousedown(x,y):
+  global mines
   boxX=x/size-1
   boxY=y/size-1
   print boxX,",",boxY
