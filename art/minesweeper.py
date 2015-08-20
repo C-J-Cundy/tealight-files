@@ -57,6 +57,9 @@ def setup():
           
 def reveal(i,j):
   global gameOn
+  global flags
+  if flags[i][j]:
+    return
   if mines[i][j] == -1:
     print "Game over"
     gameOn=False
@@ -66,6 +69,7 @@ def reveal(i,j):
   box(tx,ty,size/10*8,size/10*8)
   color("black")
   text(tx+size/10*3,ty+size/10*3,mines[i][j])
+  flags[i][j]=2
   if mines[i][j] == 0:
     for offx in range(-1,2):
       for offy in range(-1,2):
@@ -92,7 +96,6 @@ def handle_mousedown(x,y,button):
     if button == "left":
       if not flags[boxX][boxY]:
         reveal(boxX,boxY)
-        flags[boxX][boxY]=2
     if button == "right":
       if flags[boxX][boxY] != 2:
         toggleFlag(boxX,boxY)
