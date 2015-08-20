@@ -56,4 +56,4 @@ def handle_mousedown(x,y):
   global mines
   boxX=(x-xstart)/size
   boxY=(y-ystart)/size
-  print boxX,",",boxY
+  print boxX,",",boxY,",",mines[boxX][boxY]
