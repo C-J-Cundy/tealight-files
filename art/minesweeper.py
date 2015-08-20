@@ -5,6 +5,8 @@ from tealight.art import (screen_width, screen_height)
 def draw_grid(x,y):
   for i in range(10):
     for j in range(10):
-      box(0,0,100,100)
+      box(x+i*100,y+j*100,100,100)
+      color("white")
+      box(x+20+i*100,y+20+j*100,80,80)
     
-draw_grid(0,0)
+draw_grid(100,100)
