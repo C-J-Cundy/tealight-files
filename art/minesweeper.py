@@ -24,6 +24,9 @@ def setup():
     for j in range(10):
       mines[i].append(0)
 
+for i in range(10):
+  print i
+      
 setup()
 print mines
 
