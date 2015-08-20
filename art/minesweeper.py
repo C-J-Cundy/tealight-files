@@ -6,7 +6,7 @@ size=80
 xstart=50
 ystart=50
 
-global mines = [[]]
+mines = [[]]
 
 def draw_grid(x,y,size):
   for i in range(10):
