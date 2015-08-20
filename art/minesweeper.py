@@ -6,6 +6,8 @@ size=80
 xstart=50
 ystart=50
 
+global mines = [[]]
+
 def draw_grid(x,y,size):
   for i in range(10):
     for j in range(10):
