@@ -67,7 +67,7 @@ def toggleFlag(i,j):
   if flags[i][j]:
     print "yay"
   else:
-    image(xstart+size*i,ystart+size*j+size/10*2,"misc/PirateFlag.png")
+    image(xstart+size*i,ystart+size*j+size/10*2-4,"misc/PirateFlag.png")
   
 setup()
 
