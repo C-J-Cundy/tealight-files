@@ -9,6 +9,7 @@ ystart=50
 numMines=10
 
 mines = []
+flags = []
 
 
 def draw_grid(x,y,size):
@@ -22,10 +23,13 @@ def draw_grid(x,y,size):
 def setup():
   draw_grid(xstart,ystart,size)
   global mines
+  global flags
   for i in range(10):
     mines.append([])
+    flags.append([])
     for j in range(10):
       mines[i].append(0)
+      flags[i].append(0)
       
   #Make mines
   counter=0
@@ -71,3 +75,5 @@ def handle_mousedown(x,y,button):
   if button == "left":
     if boxX >= 0 and boxY >= 0 and boxX <= 9 and boxY <= 9:
       reveal(boxX,boxY)
+  if button == "left":
+    toggleFlag
