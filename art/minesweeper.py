@@ -56,6 +56,7 @@ def setup():
           
           
 def reveal(i,j):
+  global gameOn
   if mines[i][j] == -1:
     print "Game over"
     gameOn=False
@@ -79,6 +80,7 @@ setup()
 def handle_mousedown(x,y,button):
   global mines
   global flags
+  global gameOn
   boxX=(x-xstart)/size
   boxY=(y-ystart)/size
   if boxX >= 0 and boxY >= 0 and boxX <= 9 and boxY <= 9 and gameOn:
