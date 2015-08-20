@@ -65,7 +65,9 @@ def reveal(i,j):
 
 def toggleFlag(i,j):
   if flags[i][j]:
+    print "yay"
   else:
+    print "nay"
   
 setup()
 
