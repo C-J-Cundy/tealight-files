@@ -30,7 +30,7 @@ def setup():
   #Make mines
   counter=0
   while(counter < numMines):
-    tmpx=random.randInt(0,9)
+    tmpx=random.randint(0,9)
     counter += 1
       
 setup()
