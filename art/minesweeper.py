@@ -31,7 +31,10 @@ def setup():
   counter=0
   while(counter < numMines):
     tmpx=random.randint(0,9)
-    counter += 1
+    tmpy=random.randint(0,9)
+    if (mines[tmpx][tmpy] != -1):
+      mines[tmpx][tmpy]
+      counter += 1
       
 setup()
 print mines
