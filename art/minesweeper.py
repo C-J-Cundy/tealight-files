@@ -62,7 +62,10 @@ def reveal(i,j):
   box(tx,ty,size/10*8,size/10*8)
   color("black")
   text(tx+size/10*3,ty+size/10*3,mines[i][j])
-  
+
+def toggleFlag(i,j):
+  if flags[i][j]:
+  else:
   
 setup()
 
@@ -72,8 +75,8 @@ def handle_mousedown(x,y,button):
   boxX=(x-xstart)/size
   boxY=(y-ystart)/size
   print boxX,",",boxY,",",mines[boxX][boxY]
-  if button == "left":
-    if boxX >= 0 and boxY >= 0 and boxX <= 9 and boxY <= 9:
+  if boxX >= 0 and boxY >= 0 and boxX <= 9 and boxY <= 9:
+    if button == "left":
       reveal(boxX,boxY)
-  if button == "left":
-    toggleFlag
+    if button == "right":
+      toggleFlag(boxX,boxY)
